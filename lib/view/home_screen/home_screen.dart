@@ -45,6 +45,16 @@ class _HomeScreenState extends State<HomeScreen> {
               provider.cardState.cardData.isEmpty) {
             return const Center(child: CircularProgressIndicator());
           }
+          if (provider.cardState.cardData.isEmpty) {
+            return Center(
+              child: Text(
+                "No data found!!\nplease check your internet connection",
+                textAlign: TextAlign.center,
+                style: TextStyle(fontWeight: FontWeight.normal, fontSize: 14),
+              ),
+            );
+          }
+
           return RefreshIndicator(
             onRefresh: () async {
               return await provider.clearState();

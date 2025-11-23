@@ -79,7 +79,7 @@ class CardProviderModel extends ChangeNotifier {
         if (value.statusCode == 200) {
           cardState.cardData.addAll(cardResModelFromJson(value.data));
         } else {
-          cardState.cardData.clear();
+          // cardState.cardData.clear();
         }
       });
       await setlocalData();
