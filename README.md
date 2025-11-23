@@ -57,5 +57,3 @@ A promo card appears after every 3rd card. It is static in the UI unless provide
 flutter pub get
 flutter run
 ```
-
-If you want a shorter or more developer-oriented version, just let me know!
